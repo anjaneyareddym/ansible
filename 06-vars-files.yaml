@@ -1,7 +1,7 @@
 - name: varibles from files
- hosts: web
- vars_files:
- - vars.yaml
+  hosts: web
+  vars_files:
+  - vars.yaml
  tasks:
  - name: print the cource information
    ansible.buildin.debug:
