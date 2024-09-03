@@ -6,3 +6,9 @@
     ansible.builtin.package:  # it will work for all diste os
       name: nginx
       state: present
+  - name: run nginx
+     ansible.builtin.service:  # it will work for all diste os
+       name: nginx
+       state: started
+       enabled: yes
+    
