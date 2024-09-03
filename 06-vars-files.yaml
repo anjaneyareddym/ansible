@@ -1,4 +1,4 @@
--name: varibles from files
+- name: varibles from files
  hosts: web
  vars_files:
  - vars.yaml
