@@ -3,6 +3,6 @@
   vars_files:
   - vars.yaml
   tasks:
-  - name: print the cource information
+  - name: print the course information
     ansible.buildin.debug:
        msg: "Hi, I am learning {{COURCE}}, Duration is :{{DURATION}}"
