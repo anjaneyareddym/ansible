@@ -1,0 +1,7 @@
+-name: nginx install ands run
+ hosts: web
+ tasks:
+ - name: install nginx
+   ansible.builtin.package:  # it will work for all diste os
+      name: nginx
+      state: present
