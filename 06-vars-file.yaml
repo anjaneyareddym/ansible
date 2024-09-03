@@ -7,5 +7,5 @@
     ansible.buildin.debug:
         msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
   - name: print the Trainer information     
-     ansible.buildin.debug:
+    ansible.buildin.debug:
          msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
