@@ -1,0 +1,4 @@
+-name: web #ping the server
+ hosts: #which hosts your ansible wants to connect
+ tasks: #list of taks/modules
+  - name: 
