@@ -6,6 +6,6 @@
   - name: print the course information
     ansible.builtin.debug:
         msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
-  - name: print the Trainer information     
+  - name: print the "{{TRAINER}}" information     
     ansible.builtin.debug:
          msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"      
