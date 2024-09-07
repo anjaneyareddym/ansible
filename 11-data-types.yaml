@@ -18,7 +18,7 @@
      aws:
      - ias 
      - s3
-tasks:
-- name: print the cource information
-  ansible.builtin.debug:
-    msg:  "Hi , I am learning {{ course}}, with {{ duration }}, topics are : {{ topics}}, and live: {{ live }}, tools are {{tools}}"
+  tasks:
+  - name: print the cource information
+    ansible.builtin.debug:
+       msg:  "Hi , I am learning {{ course}}, with {{ duration }}, topics are : {{ topics}}, and live: {{ live }}, tools are {{tools}}"
