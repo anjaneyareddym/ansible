@@ -7,6 +7,9 @@
   - name: DURATION
     prompt: Please enter the duration
     private: false
+  - name: TRAINER
+    prompt: Please enter the TRAINER
+    private: false    
   tasks:
   - name: print the cource information
     ansible.builtin.debug:
