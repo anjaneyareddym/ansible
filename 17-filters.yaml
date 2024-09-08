@@ -1,6 +1,6 @@
 - name:  demo on filters/funtions
   hosts: local
   connection: local
-  -tasks:
+  - tasks:
     ansible.builtin.debug:
      msg: " Hell {{ course | default('Ansible')}}"
