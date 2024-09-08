@@ -1,6 +1,6 @@
 - name: install nginx
   become: yes
-  hosts: web
+  hosts: local
   tasks:
   - name: print the state
     ansible.builtin.debug:
