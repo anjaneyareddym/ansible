@@ -2,5 +2,6 @@
   hosts: local
   connection: local
   - tasks:
-    ansible.builtin.debug:
-     msg: " Hell {{ course | default('Ansible')}}"
+    - name: print course
+      ansible.builtin.debug:
+         msg: " Hell {{ course | default('Ansible')}}"
