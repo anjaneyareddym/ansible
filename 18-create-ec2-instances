@@ -9,6 +9,7 @@
       - mysql
       - backend
       - frontend
+      zone: cpr85.online
 
   tasks:
   - name: create Ec2 instances 
