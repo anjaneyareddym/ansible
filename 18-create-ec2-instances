@@ -6,10 +6,10 @@
     sg_group: sg-0f3e41c8c9e5065cd
     ami_id: ami-09c813fb71547fc4f
     insances:
-      - mysql
-      - backend
-      - frontend
-      zone: cpr85.online
+    - mysql
+    - backend
+    - frontend
+    zone: cpr85.online
 
   tasks:
   - name: create Ec2 instances 
