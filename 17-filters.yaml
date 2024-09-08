@@ -13,7 +13,7 @@
         msg: " Hello {{ greeting | upper }}"    
 
 
-    - name: get the unque value
+   - name: get the unque value
       vars:
         numbers: [1,2,3,4,5,5,4,1]
       ansible.builtin.debug:
