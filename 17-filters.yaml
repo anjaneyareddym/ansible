@@ -13,8 +13,8 @@
         msg: " Hello {{ greeting | upper }}"    
 
 
-   - name: get the unque value
-      vars:
+   - name: get the unique value
+     vars:
         numbers: [1,2,3,4,5,5,4,1]
-      ansible.builtin.debug:
+     ansible.builtin.debug:
         msg: "Unique numbers {{ numbers | unique }}  ""
