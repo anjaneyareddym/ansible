@@ -6,9 +6,9 @@
     sg_group: sg-0f3e41c8c9e5065cd
     ami_id: ami-09c813fb71547fc4f
     insances:
-      - frontend
+      - mysql
       - backend
-      - mysqlserver
+      - frontend
 
   tasks:
   - name: create Ec2 instances 
@@ -24,6 +24,32 @@
   - name: print the output
     ansible.builtin.debug:
        msg: "{{ ec2_instances }}"  
+
+  - name: create r53 private record
+    amazon.aws.route53:
+      state: present
+      zone: " {{ zone }} " #cpr85.online
+      record: "{{ item.item }}.{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}" 
+      wait: true  
+      overwrite: true 
+    loop: "{{ec2_instances.results}}"  
+    when: item.item == "mysql"   
+
+  - name: create r53 public record
+    amazon.aws.route53:
+      state: present
+      zone: " {{ zone }} " #cpr85.online
+      record: "{{ item.item }}.{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].public_ip_address }}" 
+      wait: true  
+      overwrite: true 
+    loop: "{{ec2_instances.results}}"  
+    when: item.item == "frontend"   
 
 
 
