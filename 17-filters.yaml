@@ -4,4 +4,17 @@
   tasks:
    - name: print course
      ansible.builtin.debug:
-        msg: " Hell {{ course | default('Ansible')}}"
+        msg: " Hello {{ course | default('Ansible')}}"
+
+   - name: Convert to upper case
+     vars:
+       greeting: "Hello Ramesh"
+     ansible.builtin.debug:
+        msg: " Hello {{ greeting | upper }}"    
+
+
+    - name: get the unque value
+      vars:
+        numbers: [1,2,3,4,5,5,4,1]
+      ansible.builtin.debug:
+        msg: "Unique numbers {{ numbers | unique }}  ""
